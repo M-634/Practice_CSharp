@@ -2,35 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserClick : MonoBehaviour
+namespace CommandPattern
 {
-    // Start is called before the first frame update
-    void Start()
+    public class UserClick : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //left click
-        //cast a ray
-        // detect a cube
-        // asign random color
-
-        if (Input.GetMouseButtonDown(0))
+        // Update is called once per frame
+        void Update()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            RaycastHit hitInfo;
-
-            if (Physics.Raycast(ray,out hitInfo))
+            if (Input.GetMouseButtonDown(0))
             {
-                if (hitInfo.collider.tag == "Cube")
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out RaycastHit hitInfo))
                 {
-                    //execute click command
-                    ICommand click = new ClickCommand(hitInfo.collider.gameObject, new Color(Random.value, Random.value, Random.value));
-                    click.Execute();
+                    if (hitInfo.collider.CompareTag("Cube"))
+                    {
+                        //execute click command
+                        ICommand click = new ClickCommand(hitInfo.collider.gameObject, new Color(Random.value, Random.value, Random.value));
+                        click.Execute();
+                        CommandManager.Instance.AddCommand(click);
+                    }
                 }
             }
         }

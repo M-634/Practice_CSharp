@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ICommand 
+namespace CommandPattern
 {
-    void Execute();
-    void Undue();
+    public interface ICommand
+    {
+        void Execute();
+        void Undue();
+    }
 }
+

@@ -6,7 +6,6 @@ namespace CommandPattern
 {
     public class UserClick : MonoBehaviour
     {
-
         // Update is called once per frame
         void Update()
         {

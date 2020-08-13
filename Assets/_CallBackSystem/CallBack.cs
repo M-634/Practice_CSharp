@@ -11,7 +11,6 @@ public class CallBack : MonoBehaviour
         StartCoroutine(MyRoutine(() => 
         {
             Debug.Log("The Routine has finished");
-            Debug.Log("Wow this is cool");
         }
         ));
     }

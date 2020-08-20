@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bulletPrefab: {fileID: 5959855367789976827, guid: 8086e5f86171b674a8dcfb7a18a45694,
     type: 3}
-  hasPool: 0
+  hasPool: 1
 --- !u!4 &669766632
 Transform:
   m_ObjectHideFlags: 0

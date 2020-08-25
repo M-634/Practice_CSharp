@@ -31,7 +31,7 @@ public class DialogBoxUsingDOTween : MonoBehaviour
         m_closeButton.interactable = false;
     }
 
-    public void OpenBottunClick()
+    public void OpenButtonClick()
     {
         gameObject.SetActive(true);
         m_openButton.interactable = false;
@@ -42,7 +42,7 @@ public class DialogBoxUsingDOTween : MonoBehaviour
             .OnComplete(() => m_closeButton.interactable = true));
     }
 
-    public void CloseButtunClick()
+    public void CloseButtonClick()
     {
         DOTween.Sequence()
            .Append(this.transform.DOScale(Vector3.zero, m_closeSpeeDuration))

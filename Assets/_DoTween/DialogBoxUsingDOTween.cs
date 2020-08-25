@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /// </summary>
 public class DialogBoxUsingDOTween : MonoBehaviour
 {
-    [SerializeField] Text m_text;
+    [SerializeField] Text m_dialogText;
     [SerializeField] Button m_openButton;
     [SerializeField] Button m_closeButton;
 
@@ -38,7 +38,7 @@ public class DialogBoxUsingDOTween : MonoBehaviour
 
         DOTween.Sequence()
             .Append(this.transform.DOScale(m_openScale, m_openSpeeDuration))
-            .Append(DOVirtual.Float(0f, 100f, 3f, value => { m_text.text = "Count; " + (int)value; })
+            .Append(DOVirtual.Float(0f, 100f, 3f, value => { m_dialogText.text = "Count; " + (int)value; })
             .OnComplete(() => m_closeButton.interactable = true));
     }
 

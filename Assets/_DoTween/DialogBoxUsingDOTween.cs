@@ -21,10 +21,10 @@ public class DialogBoxUsingDOTween : MonoBehaviour
     void Start()
     {
         this.transform.localScale = Vector3.zero;
-        RestDialog();
+        ResetDialog();
     }
 
-    private void RestDialog()
+    private void ResetDialog()
     {
         gameObject.SetActive(false);
         m_openButton.interactable = true;
@@ -46,6 +46,6 @@ public class DialogBoxUsingDOTween : MonoBehaviour
     {
         DOTween.Sequence()
            .Append(this.transform.DOScale(Vector3.zero, m_closeSpeeDuration))
-           .OnComplete(() => RestDialog());
+           .OnComplete(() => ResetDialog());
     }
 }

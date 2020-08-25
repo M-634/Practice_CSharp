@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 using Unity.Collections.LowLevel.Unsafe;
 /// <summary>
 /// DoTweenの機能を実験するクラス
@@ -10,6 +11,7 @@ using Unity.Collections.LowLevel.Unsafe;
 public class DoTweenTest : MonoBehaviour
 {
     [SerializeField] Color m_setColor;
+    [SerializeField] Text m_text;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +20,13 @@ public class DoTweenTest : MonoBehaviour
 
         //色の変更、Material、Sprite、Light、uGUI Image,CanvasGroup,uGUI Textなどに適応できる
         //DOfade,DOColor
-        var material = GetComponent<MeshRenderer>().material;
-        material.DOColor(m_setColor, 2f);
+        //var material = GetComponent<MeshRenderer>().material;
+        //material.DOColor(m_setColor, 2f);
 
+        //UIへの応用
+        //例；DOVirtual.Float で指定時間での値→値の変更ができる
+
+        //DOVirtual.Float(0f, 100f, 3f, value => { m_text.text = "Count; " + (int)value; });
     }
 
     private void DOTweenMove()

@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &408051282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3578219337929991004, guid: a48c4ac1be2c9504b95793a8e67eeb4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3578219338443706915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556639192
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +501,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3578219337970432002, guid: a48c4ac1be2c9504b95793a8e67eeb4f,
+        type: 3}
+      propertyPath: m_dialogText
+      value: 
+      objectReference: {fileID: 408051282}
+    - target: {fileID: 3578219338193197847, guid: a48c4ac1be2c9504b95793a8e67eeb4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578219339218382257, guid: a48c4ac1be2c9504b95793a8e67eeb4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseButtonClick
+      objectReference: {fileID: 0}
     - target: {fileID: 3578219339516473064, guid: a48c4ac1be2c9504b95793a8e67eeb4f,
         type: 3}
       propertyPath: m_Name

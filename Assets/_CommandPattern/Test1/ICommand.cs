@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CommandPattern
+namespace CommandPattern_Test1
 {
     public interface ICommand
     {

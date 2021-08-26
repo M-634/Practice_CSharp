@@ -55,9 +55,10 @@ namespace DesignPatterns.Observer
     {
         public void Update(ISubject subject)
         {
-            throw new NotImplementedException();
+            
         }
     }
+
     public class ConcreteObServerB : IObserver
     {
         public void Update(ISubject subject)

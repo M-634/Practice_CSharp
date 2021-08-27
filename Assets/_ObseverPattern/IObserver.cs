@@ -1,9 +1,8 @@
 ﻿
 namespace DesignPatterns.Observer
 {
-    public interface IObserver
+    public interface IObserver<T>
     {
-        //Recive update from subject.
-        void Update(ISubject subject);
+        void OnNext(T value);
     }
 }
